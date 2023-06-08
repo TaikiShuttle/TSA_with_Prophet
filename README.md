@@ -1,6 +1,10 @@
 # TSA_with_Prophet
 A template for time series analysis using Prophet procedure. This is used for potential online deployment for Digital Audit Studio of @Huayun IT Co., Ltd. 
 
+A sample prediction output is shown in the followin figure.
+
+[!sample](./src/sample.png)
+
 ### Intuition
 One of the major challenges in time series analysis is overcoming the lagging problem. Traditional time series analysis algorithms like ARIMA often respond to sudden changes slowly, i.e., takes several time units to reflect the change. Meanwhile, audit data prediction requires a instant prediction that can reflecting a proper trend. <a href="https://facebook.github.io/prophet/">Prophet</a> developed by facebook provides a relatively accurate prediction procedures for time series. It performs almost equally well when the data has large variations. Based on this strength, I decided to write some functions that encapsulate the model selection and tuning process of Prophet. It contains a little bit my own understanding of the algorithm as well. And this repo might be a starting point for potential deployment develpoment.
 
