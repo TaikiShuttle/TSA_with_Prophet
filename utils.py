@@ -95,6 +95,15 @@ def plot_forecast_results(model: Prophet, forecast: pd.DataFrame):
     
     return fig
 
+def make_forecast_numpy(forecast: pd.DataFrame):
+    '''
+    Return an forecast array in four dimensions, 'ds', 'yhat', 'yhat_lower', 'yhat_upper', for frontend.
+    ---
+    Params:
+    forecast: A numpy.array containing prediction results
+    '''
+    return forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].to_numpy()
+
 def save_model(model: Prophet, filename: str):
     '''
     Save an existing model.
